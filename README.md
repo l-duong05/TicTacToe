@@ -1,4 +1,3 @@
 # TicTacToe
-
-# g++ -o ticTacToe ticTacToe.cpp
-# ./ticTacToe
+g++ -o ticTacToe ticTacToe.cpp
+./ticTacToe
