@@ -123,13 +123,13 @@ bool isDraw(vector<vector<char>>& map) {
 bool isGameOver(vector<vector<char>>& map, pair<string, char>& user) {
     // vertical and horizontal check
     for (int i = 0; i < 3; i++) {
-        if ((map[i][0] != ' ') && (map[i][0] == map[i][1]) && (map[i][0] == map[i][2]) && (map[i][1] == map[i][2])) return true;
-        if ((map[0][i] != ' ') && (map[0][i] == map[1][i]) && (map[0][i] == map[2][i]) && (map[2][i] == map[1][i])) return true;
+        if ((map[i][0] != ' ') && (map[i][0] == map[i][1]) && (map[i][1] == map[i][2])) return true;
+        if ((map[0][i] != ' ') && (map[0][i] == map[1][i]) && (map[0][i] == map[2][i])) return true;
     }
 
     // diagonal check
-    if ((map[0][0] != ' ') && (map[0][0] == map[1][1]) && (map[0][0] == map[2][2]) && (map[1][1] == map[2][2])) return true;
-    if ((map[0][2] != ' ') && (map[0][2] == map[1][1]) && (map[0][2] == map[2][0]) && (map[1][1] == map[2][0])) return true;
+    if ((map[0][0] != ' ') && (map[0][0] == map[1][1]) && (map[1][1] == map[2][2])) return true;
+    if ((map[0][2] != ' ') && (map[0][2] == map[1][1]) && (map[1][1] == map[2][0])) return true;
 
     return false;
 }
